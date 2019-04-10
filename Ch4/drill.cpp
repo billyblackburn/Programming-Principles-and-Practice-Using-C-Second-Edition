@@ -1,6 +1,7 @@
 /*
 1. Write a program that consists of a while-loop that (each time around the loop) reads in two ints
 and then prints them. Exit the program when a terminating '|' is entered.
+
 2. Change the program to write out the smaller value is: followed by the smaller of the numbers
 and the larger value is: followed by the larger value.
 3. Augment the program so that it writes the line the numbers are equal (only) if they are
@@ -28,3 +29,38 @@ values.
 11. Before writing out the values from the vector, sort them (that’ll make them come out in
 increasing order).
 */
+#include "std_lib_facilities.h"
+
+int main()
+{
+    double c = 0;
+    double d = 0;
+    double i = 0;
+    cout << "Enter 1 number: \n";
+    while(cin >> d >> c)
+    {
+        cout << "You entered: " << d << " " << c << '\n';
+        if(c > d) 
+        {
+            cout << "The larger number is: " << c << '\n';
+            cout << "The smaller number is: " << d << '\n';
+        }
+        else if (d > c)
+        {
+            cout << "The smaller number is: " << d << '\n';
+            cout << "The larger number is: " << c << '\n';
+        }
+        else if (abs(c) - abs(d) <= (1/100))
+        {
+            cout << "The numbers are almost equal\n";
+        }
+       
+    }
+
+        
+        
+        
+
+
+
+}

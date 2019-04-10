@@ -1,5 +1,8 @@
 #include "std_lib_facilities.h"
 // simple program to exercise operators
+/* Get this little program to run. Then, modify it to read an int rather than a double. Note
+that sqrt() is not defined for an int so assign n to a double and take sqrt() of that.
+*/
 int main()
 {
 cout << "Please enter a floating-point value: ";
