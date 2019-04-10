@@ -28,3 +28,23 @@ values.
 11. Before writing out the values from the vector, sort them (that’ll make them come out in
 increasing order).
 */
+#include "std_lib_facilities.h"
+
+int main()
+{
+	double x, y;
+	cout << "Enter two numbers seperated by whitespace(s)";
+	while(cin >> x >> y){
+		cout << x << " " << y;
+		if(x > y){
+			cout << x << " is greater\n";
+			cout << y << " is smaller\n";
+		}
+		if(x < y){
+			cout << x << " is smaller\n";
+			cout << y << " is larger\n";
+		}
+	}
+	return 0;
+}
+
