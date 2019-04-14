@@ -13,8 +13,19 @@ guess which move the machine will make next.
 vector<char> answers =  {'r', 'p', 's'};
 char reply;
 char humanAnswer;
+
+int gamesplayed = 0;
+int cpuwin = 0;
+int humanwin = 0;
+
+
+
+
+
 int main()
 {
+    while(cpuwin + humanwin < 5 ){
+        ++gamesplayed;
     cout << "Enter rock, paper, or scissor: \n";
     cin >> reply;
     for(int x = 0; x < answers.size(); ++x)
@@ -33,12 +44,17 @@ int main()
         {
             case 'r':
                 cout << "Rock vs rock ties \n";
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 'p':
-                cout << "Paper beats rock \n";
+                cout << "Paper beats rock, Cpu wins \n";
+                ++ cpuwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 's':
-                cout << "Rock beats scissors \n";
+                cout << "Rock beats scissors, Human wins! \n";
+                ++ humanwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
         }
     }
@@ -47,13 +63,18 @@ int main()
         switch (cpuAnswer)
         {
             case 'r':
-                cout << "Rock beats paper \n";
+                cout << "Paper beats rock, Human wins! :-) \n";
+                ++ humanwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 'p':
                 cout << "Paper ties paper \n";
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 's':
-                cout << "Scissors beat paper..duh \n";
+                cout << "Scissors beat paper, CPU wins \n";
+                ++ cpuwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
         }
     }
@@ -62,15 +83,21 @@ int main()
         switch (cpuAnswer)
         {
             case 'r':
-                cout << "Rock beats scissors \n";
+                cout << "Rock beats scissors, CPU wins \n";
+                ++ cpuwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 'p':
-                cout << "Scissors beat paper \n";
+                cout << "Scissors beat paper, Human wins! \n";
+                ++ humanwin;
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
             case 's':
                 cout << "Scissors ties scissors \n";
+                cout << "CPU: " << cpuwin << "\tHuman: " << humanwin << '\n';
                 break;
         }
+    }
     }
 }
 
